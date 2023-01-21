@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://dr2lx5x2lrj17"]
+
+[ext_resource type="Texture2D" uid="uid://c1cx0ptinqijd" path="res://assets/ballGrey_07.png" id="1_qv5e4"]
+[ext_resource type="Script" path="res://ball.gd" id="1_tinl0"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_rts4s"]
+bounce = 0.42
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gyts8"]
+radius = 30.0167
+
+[node name="Ball" type="RigidBody2D" groups=["pickable"]]
+input_pickable = true
+physics_material_override = SubResource("PhysicsMaterial_rts4s")
+continuous_cd = 1
+freeze_mode = 1
+script = ExtResource("1_tinl0")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("1_qv5e4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_gyts8")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]

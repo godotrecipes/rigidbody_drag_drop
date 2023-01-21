@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=3 uid="uid://bq60vyddj2ua6"]
+
+[ext_resource type="Texture2D" uid="uid://dwacxe8xrkkf0" path="res://assets/tileGreen_03.png" id="1_6fbgu"]
+[ext_resource type="Script" path="res://main.gd" id="1_it8ah"]
+[ext_resource type="PackedScene" uid="uid://dr2lx5x2lrj17" path="res://ball.tscn" id="2_yyqpa"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_aum1b"]
+texture = ExtResource("1_6fbgu")
+texture_region_size = Vector2i(44, 44)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-22, -22, 22, -22, 22, 22, -22, 22)
+
+[sub_resource type="TileSet" id="TileSet_h6g5f"]
+tile_size = Vector2i(44, 44)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_aum1b")
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_it8ah")
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_h6g5f")
+format = 2
+layer_0/tile_data = PackedInt32Array(851968, 0, 0, 851969, 0, 0, 851970, 0, 0, 851971, 0, 0, 851972, 0, 0, 851973, 0, 0, 851974, 0, 0, 851975, 0, 0, 851976, 0, 0, 851977, 0, 0, 851978, 0, 0, 851979, 0, 0, 851980, 0, 0, 851981, 0, 0, 851982, 0, 0, 851983, 0, 0, 851984, 0, 0, 851985, 0, 0, 851986, 0, 0, 851987, 0, 0, 851988, 0, 0, 851989, 0, 0, 851990, 0, 0, 851991, 0, 0, 851992, 0, 0, 851993, 0, 0, 25, 0, 0, 65561, 0, 0, 131097, 0, 0, 196633, 0, 0, 262169, 0, 0, 327705, 0, 0, 393241, 0, 0, 458777, 0, 0, 524313, 0, 0, 589849, 0, 0, 655385, 0, 0, 720921, 0, 0, 786457, 0, 0, 0, 0, 0, 65536, 0, 0, 131072, 0, 0, 196608, 0, 0, 262144, 0, 0, 327680, 0, 0, 393216, 0, 0, 458752, 0, 0, 524288, 0, 0, 589824, 0, 0, 655360, 0, 0, 720896, 0, 0, 786432, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 11, 0, 0, 12, 0, 0, 13, 0, 0, 14, 0, 0, 15, 0, 0, 16, 0, 0, 17, 0, 0, 18, 0, 0, 19, 0, 0, 20, 0, 0, 21, 0, 0, 22, 0, 0, 23, 0, 0, 24, 0, 0, 589835, 0, 0, 655371, 0, 0, 720907, 0, 0, 786443, 0, 0, 589836, 0, 0, 655372, 0, 0, 720908, 0, 0, 786444, 0, 0, 393236, 0, 0, 393237, 0, 0, 458773, 0, 0, 524309, 0, 0, 524308, 0, 0, 589844, 0, 0, 655380, 0, 0, 720916, 0, 0, 720917, 0, 0, 786453, 0, 0, 786452, 0, 0, 655381, 0, 0, 589845, 0, 0, 458772, 0, 0, 589825, 0, 0, 589826, 0, 0, 589827, 0, 0, 589828, 0, 0, 524292, 0, 0, 524291, 0, 0, 524290, 0, 0, 524289, 0, 0)
+
+[node name="Ball" parent="." instance=ExtResource("2_yyqpa")]
+position = Vector2(388, 279)
+
+[node name="Ball2" parent="." instance=ExtResource("2_yyqpa")]
+position = Vector2(517, 160)
+
+[node name="Ball3" parent="." instance=ExtResource("2_yyqpa")]
+position = Vector2(632, 338)
+
+[node name="Ball4" parent="." instance=ExtResource("2_yyqpa")]
+position = Vector2(223, 182)
+
+[node name="Ball5" parent="." instance=ExtResource("2_yyqpa")]
+position = Vector2(846, 257)
