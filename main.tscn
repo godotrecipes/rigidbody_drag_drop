@@ -1,15 +1,13 @@
 [gd_scene load_steps=6 format=3 uid="uid://bq60vyddj2ua6"]
 
 [ext_resource type="Texture2D" uid="uid://dwacxe8xrkkf0" path="res://assets/tileGreen_03.png" id="1_6fbgu"]
-[ext_resource type="Script" path="res://main.gd" id="1_it8ah"]
+[ext_resource type="Script" uid="uid://ygnv4f8xbpbp" path="res://main.gd" id="1_it8ah"]
 [ext_resource type="PackedScene" uid="uid://dr2lx5x2lrj17" path="res://ball.tscn" id="2_yyqpa"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_aum1b"]
 texture = ExtResource("1_6fbgu")
 texture_region_size = Vector2i(44, 44)
 0:0/0 = 0
-0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-0:0/0/physics_layer_0/angular_velocity = 0.0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-22, -22, 22, -22, 22, 22, -22, 22)
 
 [sub_resource type="TileSet" id="TileSet_h6g5f"]
